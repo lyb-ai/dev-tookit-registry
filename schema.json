@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "hooks": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z0-9-_]+$": {
+          "$ref": "#/definitions/component"
+        }
+      }
+    },
+    "utils": {
+      "type": "object",
+      "patternProperties": {
+        "^[a-zA-Z0-9-_]+$": {
+          "$ref": "#/definitions/component"
+        }
+      }
+    }
+  },
+  "definitions": {
+    "component": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "category": { "type": "string" },
+        "version": { "type": "string" },
+        "dependencies": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "internalDependencies": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "files": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "type": { "enum": ["hook", "util"] },
+              "path": { "type": "string" },
+              "target": { "type": "string" }
+            },
+            "required": ["type", "path", "target"]
+          }
+        }
+      },
+      "required": ["name", "description", "files", "version"]
+    }
+  }
+}

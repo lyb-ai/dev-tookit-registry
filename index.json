@@ -1,0 +1,67 @@
+{
+  "$schema": "./schema.json",
+  "hooks": {
+    "useDebounce": {
+      "name": "useDebounce",
+      "description": "Delays updating a value until a specified time has passed since the last change.",
+      "category": "Hooks",
+      "version": "1.0.0",
+      "files": [
+        {
+          "type": "hook",
+          "path": "hooks/useDebounce.ts",
+          "target": "hooks/useDebounce.ts"
+        }
+      ],
+      "dependencies": [],
+      "internalDependencies": []
+    },
+    "useLocalStorage": {
+      "name": "useLocalStorage",
+      "description": "Persists state to localStorage with synchronization.",
+      "category": "Hooks",
+      "version": "1.0.0",
+      "files": [
+        {
+          "type": "hook",
+          "path": "hooks/useLocalStorage.ts",
+          "target": "hooks/useLocalStorage.ts"
+        }
+      ],
+      "dependencies": [],
+      "internalDependencies": [
+        "utils/isBrowser"
+      ]
+    }
+  },
+  "utils": {
+    "formatDate": {
+      "name": "formatDate",
+      "description": "Formats a date according to the specified locale and options.",
+      "version": "1.0.0",
+      "files": [
+        {
+          "type": "util",
+          "path": "utils/formatDate.ts",
+          "target": "utils/formatDate.ts"
+        }
+      ],
+      "dependencies": [],
+      "internalDependencies": []
+    },
+    "isBrowser": {
+      "name": "isBrowser",
+      "description": "Checks if the code is running in a browser environment.",
+      "version": "1.0.0",
+      "files": [
+        {
+          "type": "util",
+          "path": "utils/isBrowser.ts",
+          "target": "utils/isBrowser.ts"
+        }
+      ],
+      "dependencies": [],
+      "internalDependencies": []
+    }
+  }
+}
