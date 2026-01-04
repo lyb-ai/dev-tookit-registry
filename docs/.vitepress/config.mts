@@ -23,6 +23,7 @@ const mergedSidebar = [
 export default defineConfig({
   title: "@dev-tookit/registry",
   description: "Component registry for dev-tookit",
+  base: '/dev-tookit-registry/',
   vite: {},
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
