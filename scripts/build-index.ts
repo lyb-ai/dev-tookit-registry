@@ -59,7 +59,7 @@ function generateIndex() {
   // Process Hooks
   if (fs.existsSync(HOOKS_DIR)) {
     fs.readdirSync(HOOKS_DIR).forEach((file) => {
-      if (!file.endsWith(".ts") && !file.endsWith(".tsx")) return;
+      if (!file.match(/\.(ts|tsx|js|jsx)$/)) return;
       const name = path.basename(file, path.extname(file));
       const content = fs.readFileSync(path.join(HOOKS_DIR, file), "utf-8");
 
@@ -84,7 +84,7 @@ function generateIndex() {
   // Process Utils
   if (fs.existsSync(UTILS_DIR)) {
     fs.readdirSync(UTILS_DIR).forEach((file) => {
-      if (!file.endsWith(".ts") && !file.endsWith(".tsx")) return;
+      if (!file.match(/\.(ts|tsx|js|jsx)$/)) return;
       const name = path.basename(file, path.extname(file));
       const content = fs.readFileSync(path.join(UTILS_DIR, file), "utf-8");
 
