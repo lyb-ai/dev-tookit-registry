@@ -91,8 +91,7 @@ function generateTemplate(name: string, type: string, isTs: boolean): string {
 };
 
 /**
- * ${name}
- * @description ${description}
+ * ${description}
  */
 export const ${name} = (props: ${propsName}) => {
   // TODO: Implement ${name}
@@ -101,8 +100,7 @@ export const ${name} = (props: ${propsName}) => {
 `;
   } else {
     return `/**
- * ${name}
- * @description ${description}
+ * ${description}
  */
 export const ${name} = (params) => {
   // TODO: Implement ${name}
