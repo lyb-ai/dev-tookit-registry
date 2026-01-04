@@ -18,7 +18,7 @@
     },
     "useDebounceFn": {
       "name": "useDebounceFn",
-      "description": "useDebounceFn",
+      "description": "A hook that returns a debounced version of the passed function.",
       "category": "Hooks",
       "version": "1.0.0",
       "files": [
@@ -47,6 +47,21 @@
       "internalDependencies": [
         "utils/isBrowser"
       ]
+    },
+    "useThrottle": {
+      "name": "useThrottle",
+      "description": "A hook that throttles the execution of a function, ensuring it only runs once within a specified delay period.",
+      "category": "Hooks",
+      "version": "1.0.0",
+      "files": [
+        {
+          "type": "hook",
+          "path": "hooks/useThrottle.js",
+          "target": "hooks/useThrottle.js"
+        }
+      ],
+      "dependencies": [],
+      "internalDependencies": []
     }
   },
   "utils": {

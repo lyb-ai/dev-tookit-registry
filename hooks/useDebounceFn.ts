@@ -1,8 +1,7 @@
 import { useRef, useEffect, useCallback, type DependencyList } from 'react';
 
 /**
- * useDebounceFn
- * @description A hook that returns a debounced version of the passed function.
+ * A hook that returns a debounced version of the passed function.
  * @template T The type of the function to debounce
  * @param {T} fn The function to be debounced
  * @param {number} delay The delay in milliseconds
