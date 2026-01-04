@@ -3,7 +3,7 @@
   "hooks": {
     "useDebounce": {
       "name": "useDebounce",
-      "description": "Delays updating a value until a specified time has passed since the last change.",
+      "description": "Delays updating a value until a specified time has passed since the last change.\r",
       "category": "Hooks",
       "version": "1.0.0",
       "files": [
@@ -16,9 +16,24 @@
       "dependencies": [],
       "internalDependencies": []
     },
+    "useDebounceFn": {
+      "name": "useDebounceFn",
+      "description": "useDebounceFn",
+      "category": "Hooks",
+      "version": "1.0.0",
+      "files": [
+        {
+          "type": "hook",
+          "path": "hooks/useDebounceFn.ts",
+          "target": "hooks/useDebounceFn.ts"
+        }
+      ],
+      "dependencies": [],
+      "internalDependencies": []
+    },
     "useLocalStorage": {
       "name": "useLocalStorage",
-      "description": "Persists state to localStorage with synchronization.",
+      "description": "Persists state to localStorage with synchronization.\r",
       "category": "Hooks",
       "version": "1.0.0",
       "files": [
@@ -37,7 +52,7 @@
   "utils": {
     "formatDate": {
       "name": "formatDate",
-      "description": "Formats a date according to the specified locale and options.",
+      "description": "Formats a date according to the specified locale and options.\r",
       "version": "1.0.0",
       "files": [
         {
@@ -51,7 +66,7 @@
     },
     "isBrowser": {
       "name": "isBrowser",
-      "description": "Checks if the code is running in a browser environment.",
+      "description": "Checks if the code is running in a browser environment.\r",
       "version": "1.0.0",
       "files": [
         {
