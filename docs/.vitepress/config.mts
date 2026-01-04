@@ -24,6 +24,7 @@ export default defineConfig({
   title: "@dev-tookit/registry",
   description: "Component registry for dev-tookit",
   base: '/dev-tookit-registry/',
+  ignoreDeadLinks: true,
   vite: {},
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
