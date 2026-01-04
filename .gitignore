@@ -31,3 +31,12 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# VitePress
+docs/.vitepress/cache
+docs/.vitepress/dist
+
+# Generated Documentation
+docs/sidebar.json
+docs/hooks/
+docs/utils/

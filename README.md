@@ -18,35 +18,10 @@
 
 你可以本地启动注册表服务，或将其部署到任意静态托管平台（如 GitHub Pages、Vercel、Netlify）。
 
-- 安装与启动（推荐使用 pnpm）：
-
-```bash
-pnpm install
-pnpm run start # 使用 serve 静态服务，默认 http://localhost:3000/
-```
-
 - 在你的项目中配置 dev-tookit CLI：
 
 ```bash
 npx dev-tookit init
-```
-
-- 配置 registryUrl 为本地服务地址：
-
-```json
-{
-  "$schema": "./node_modules/dev-tookit/schema.json",
-  "typescript": true,
-  "registryUrl": "http://localhost:3000",
-  "aliases": {
-    "utils": "@/lib/utils",
-    "hooks": "@/hooks"
-  },
-  "paths": {
-    "hooks": "src/hooks",
-    "utils": "src/lib/utils"
-  }
-}
 ```
 
 - 使用 CLI 拉取并注入源码：
@@ -62,7 +37,7 @@ npx dev-tookit add util formatDate --force
 npx dev-tookit list
 ```
 
-说明：CLI 会请求 <registryUrl>/index.json 以获取组件元数据，并根据 aliases/paths 将源码写入你的项目，同时重写 import 路径以匹配本地别名。
+说明：CLI 会请求 `<registryUrl>/index.json` 以获取组件元数据，并根据 aliases/paths 将源码写入你的项目，同时重写 import 路径以匹配本地别名。
 
 ## 📁 仓库结构
 
@@ -132,6 +107,13 @@ npx dev-tookit list
 
 ## 🛠️ 开发与维护
 
+- 安装与启动（推荐使用 pnpm）：
+
+```bash
+pnpm install
+pnpm run start # 使用 serve 静态服务，默认 http://localhost:3000/
+```
+
 - 新增一个 Hook/Util：
 
 ```bash
@@ -153,7 +135,26 @@ pnpm run typecheck
   - 生成符合 Schema 的 `index.json`。
 
 - 本地预览：
+
   - 启动后访问 `http://localhost:3000/index.json` 查看注册表索引。
+
+- 配置 registryUrl 为本地服务地址：
+
+```json
+{
+  "$schema": "./node_modules/dev-tookit/schema.json",
+  "typescript": true,
+  "registryUrl": "http://localhost:3000",
+  "aliases": {
+    "utils": "@/lib/utils",
+    "hooks": "@/hooks"
+  },
+  "paths": {
+    "hooks": "src/hooks",
+    "utils": "src/lib/utils"
+  }
+}
+```
 
 ## 🤝 贡献指南
 
