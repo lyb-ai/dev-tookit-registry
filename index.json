@@ -18,7 +18,7 @@
     },
     "useDebounceFn": {
       "name": "useDebounceFn",
-      "description": "A hook that returns a debounced version of the passed function.",
+      "description": "A hook that returns a debounced version of the passed function.\r",
       "category": "Hooks",
       "version": "1.0.0",
       "files": [
@@ -79,6 +79,20 @@
       "dependencies": [],
       "internalDependencies": []
     },
+    "isAndroid": {
+      "name": "isAndroid",
+      "description": "Checks if the current device is running Android.",
+      "version": "1.0.0",
+      "files": [
+        {
+          "type": "util",
+          "path": "utils/isAndroid.ts",
+          "target": "utils/isAndroid.ts"
+        }
+      ],
+      "dependencies": [],
+      "internalDependencies": []
+    },
     "isBrowser": {
       "name": "isBrowser",
       "description": "Checks if the code is running in a browser environment.\r",
@@ -88,6 +102,20 @@
           "type": "util",
           "path": "utils/isBrowser.ts",
           "target": "utils/isBrowser.ts"
+        }
+      ],
+      "dependencies": [],
+      "internalDependencies": []
+    },
+    "isIOS": {
+      "name": "isIOS",
+      "description": "Checks if the current device is running iOS (iPhone, iPad, iPod).",
+      "version": "1.0.0",
+      "files": [
+        {
+          "type": "util",
+          "path": "utils/isIOS.ts",
+          "target": "utils/isIOS.ts"
         }
       ],
       "dependencies": [],
