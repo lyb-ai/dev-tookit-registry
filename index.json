@@ -79,6 +79,34 @@
       "dependencies": [],
       "internalDependencies": []
     },
+    "getUrlParam": {
+      "name": "getUrlParam",
+      "description": "Retrieves all query parameters from the current URL as an object.",
+      "version": "1.0.0",
+      "files": [
+        {
+          "type": "util",
+          "path": "utils/getUrlParam.ts",
+          "target": "utils/getUrlParam.ts"
+        }
+      ],
+      "dependencies": [],
+      "internalDependencies": []
+    },
+    "handleCopy": {
+      "name": "handleCopy",
+      "description": "复制文本到剪贴板",
+      "version": "1.0.0",
+      "files": [
+        {
+          "type": "util",
+          "path": "utils/handleCopy.ts",
+          "target": "utils/handleCopy.ts"
+        }
+      ],
+      "dependencies": [],
+      "internalDependencies": []
+    },
     "isAndroid": {
       "name": "isAndroid",
       "description": "Checks if the current device is running Android.",
