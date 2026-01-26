@@ -4,7 +4,7 @@
 
 将包作为“源码生成器”而非“运行时依赖”。本仓库是 dev-tookit 的公共源码模板注册表：以 TypeScript 源码形式维护 Hooks 与 Utils，并通过索引文件 index.json 暴露给 CLI 或任意客户端使用。
 
-文档地址：[dev-tookit Registry](https://dev-tookit.github.io/registry/)
+文档地址：[dev-tookit Registry](https://lyb-ai.github.io/dev-tookit-registry/)
 
 ## 目录
 
