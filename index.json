@@ -48,6 +48,21 @@
         "utils/isBrowser"
       ]
     },
+    "useMemoizedFn": {
+      "name": "useMemoizedFn",
+      "description": "Hook that returns a memoized version of the function that persists across renders",
+      "category": "Hooks",
+      "version": "1.0.0",
+      "files": [
+        {
+          "type": "hook",
+          "path": "hooks/useMemoizedFn.ts",
+          "target": "hooks/useMemoizedFn.ts"
+        }
+      ],
+      "dependencies": [],
+      "internalDependencies": []
+    },
     "useThrottle": {
       "name": "useThrottle",
       "description": "A hook that throttles the execution of a function, ensuring it only runs once within a specified delay period.",
