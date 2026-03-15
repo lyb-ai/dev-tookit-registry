@@ -17,8 +17,8 @@
     "newTool": "tsx scripts/new-tool.ts",
     "start": "serve . --cors",
     "docs:generate": "tsx scripts/generate-docs.ts",
-    "docs:dev": "pnpm docs:generate && vitepress dev docs",
-    "docs:build": "pnpm docs:generate && vitepress build docs",
+    "docs:dev": "pnpm build:index && pnpm docs:generate && vitepress dev docs",
+    "docs:build": "pnpm build:index && pnpm docs:generate && vitepress build docs",
     "docs:preview": "vitepress preview docs"
   },
   "peerDependencies": {
