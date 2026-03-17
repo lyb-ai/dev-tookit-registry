@@ -57,7 +57,7 @@ function parseJSDoc(content: string): Omit<DocData, 'name' | 'dependencies' | 'i
 
       if (line.startsWith('@param')) {
         // @param {Type} name Desc
-        const match = line.match(/@param\s+\{(.*?)\}\s+(\[?[\w\.]+\]?)\s+(.*)/);
+        const match = line.match(/@param\s+\{(.*?)\}\s+(\[?[\w.]+\]?)\s+(.*)/);
         if (match) {
           params.push({
             type: match[1],
@@ -174,7 +174,7 @@ async function main() {
   }
 
   const indexJson: Registry = JSON.parse(fs.readFileSync(INDEX_JSON_PATH, 'utf-8'));
-  const sidebar: Record<string, any[]> = {};
+  const sidebar: Record<string, unknown[]> = {};
 
   for (const category of CATEGORIES) {
     const items = [];
@@ -182,7 +182,7 @@ async function main() {
 
     if (!registryItems) continue;
 
-    for (const [key, item] of Object.entries(registryItems)) {
+    for (const [, item] of Object.entries(registryItems)) {
       // Find the main file
       const mainFile = item.files.find(f => f.type === (category === 'hooks' ? 'hook' : 'util')) || item.files[0];
       if (!mainFile) {
