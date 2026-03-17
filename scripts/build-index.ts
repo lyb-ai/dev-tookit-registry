@@ -40,13 +40,13 @@ function extractDescription(content: string): string {
 
 // Helper to find internal dependencies (e.g. import { isBrowser } from "@/utils/isBrowser")
 function findInternalDependencies(content: string): string[] {
-  const deps: string[] = [];
-  const regex = /from "@\/(utils|hooks)\/(\w+)"/g;
+  const deps = new Set<string>();
+  const regex = /from\s+['"]@\/(utils|hooks)\/([^'"]+)['"]/g;
   let match;
   while ((match = regex.exec(content)) !== null) {
-    deps.push(`${match[1]}/${match[2]}`); // e.g. "utils/isBrowser"
+    deps.add(`${match[1]}/${match[2]}`);
   }
-  return deps;
+  return Array.from(deps);
 }
 
 function generateIndex() {
