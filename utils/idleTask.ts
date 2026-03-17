@@ -105,5 +105,6 @@ export function useIdleTask(
         cleanup();
       }
     };
-  }, [enabled, timeout, fallbackDelay, ...deps]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [enabled, timeout, fallbackDelay, task, ...deps]);
 }

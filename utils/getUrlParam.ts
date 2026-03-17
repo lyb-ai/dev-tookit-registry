@@ -45,7 +45,7 @@ export function getUrlParam(
       // Use a dummy base to handle relative URLs safely
       const urlObj = new URL(url, 'http://dummy.base');
       params = urlObj.searchParams;
-      
+
       // Also check if there's a hash with query params (e.g. /path#/sub?id=1)
       if (urlObj.hash.includes('?')) {
         const hashSearch = urlObj.hash.split('?')[1];
@@ -54,12 +54,13 @@ export function getUrlParam(
       }
     } catch (e) {
       // Fallback: try parsing directly (e.g. if input is just "id=1&name=2")
+      console.warn('Failed to parse URL query params:', e);
       params = new URLSearchParams(url);
     }
   } else {
     // Current window location
     params = new URLSearchParams(window.location.search);
-    
+
     // Merge hash params (HashRouter support)
     const hash = window.location.hash;
     const hashQueryIndex = hash.indexOf('?');
@@ -79,6 +80,6 @@ export function getUrlParam(
   params.forEach((value, k) => {
     result[k] = value;
   });
-  
+
   return result;
 }
