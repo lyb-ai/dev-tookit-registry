@@ -31,6 +31,23 @@
       "dependencies": [],
       "internalDependencies": []
     },
+    "useIdleTask": {
+      "name": "useIdleTask",
+      "description": "A task function that can optionally return a cleanup function.",
+      "category": "Hooks",
+      "version": "1.0.0",
+      "files": [
+        {
+          "type": "hook",
+          "path": "hooks/useIdleTask.ts",
+          "target": "hooks/useIdleTask.ts"
+        }
+      ],
+      "dependencies": [],
+      "internalDependencies": [
+        "utils/idleTask"
+      ]
+    },
     "useLocalStorage": {
       "name": "useLocalStorage",
       "description": "Persists state to localStorage with synchronization.\r",
@@ -50,7 +67,7 @@
     },
     "useMemoizedFn": {
       "name": "useMemoizedFn",
-      "description": "Hook that returns a memoized version of the function that persists across renders",
+      "description": "Hook that returns a memoized version of the function that persists across renders\r",
       "category": "Hooks",
       "version": "1.0.0",
       "files": [
@@ -65,7 +82,7 @@
     },
     "useThrottle": {
       "name": "useThrottle",
-      "description": "A hook that throttles the execution of a function, ensuring it only runs once within a specified delay period.",
+      "description": "A hook that throttles the execution of a function, ensuring it only runs once within a specified delay period.\r",
       "category": "Hooks",
       "version": "1.0.0",
       "files": [
@@ -96,7 +113,7 @@
     },
     "getUrlParam": {
       "name": "getUrlParam",
-      "description": "Retrieves all query parameters from the current URL as an object.",
+      "description": "Retrieves all query parameters from the current URL as an object.\r",
       "version": "1.0.0",
       "files": [
         {
@@ -110,7 +127,7 @@
     },
     "handleCopy": {
       "name": "handleCopy",
-      "description": "复制文本到剪贴板",
+      "description": "复制文本到剪贴板\r",
       "version": "1.0.0",
       "files": [
         {
@@ -122,9 +139,23 @@
       "dependencies": [],
       "internalDependencies": []
     },
+    "idleTask": {
+      "name": "idleTask",
+      "description": "Options for scheduling an idle task.",
+      "version": "1.0.0",
+      "files": [
+        {
+          "type": "util",
+          "path": "utils/idleTask.ts",
+          "target": "utils/idleTask.ts"
+        }
+      ],
+      "dependencies": [],
+      "internalDependencies": []
+    },
     "isAndroid": {
       "name": "isAndroid",
-      "description": "Checks if the current device is running Android.",
+      "description": "Checks if the current device is running Android.\r",
       "version": "1.0.0",
       "files": [
         {
@@ -152,7 +183,7 @@
     },
     "isIOS": {
       "name": "isIOS",
-      "description": "Checks if the current device is running iOS (iPhone, iPad, iPod).",
+      "description": "Checks if the current device is running iOS (iPhone, iPad, iPod).\r",
       "version": "1.0.0",
       "files": [
         {

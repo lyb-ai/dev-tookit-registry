@@ -12,30 +12,30 @@ import { useRef, useEffect, useCallback, type DependencyList } from 'react';
  *   console.log('debounced');
  * }, 500);
  */
-export const useDebounceFn = <T extends (...args: any[]) => any>(
+export const useDebounceFn = <T extends (...args: unknown[]) => unknown>(
   fn: T,
   delay: number,
   dep: DependencyList = []
 ) => {
-  const { current } = useRef<{ fn: T; timer: ReturnType<typeof setTimeout> | null }>({
+  const ref = useRef<{ fn: T; timer: ReturnType<typeof setTimeout> | null }>({
     fn,
     timer: null,
   });
 
   useEffect(() => {
-    current.fn = fn;
+    ref.current.fn = fn;
   }, [fn]);
 
   return useCallback(
     (...args: Parameters<T>) => {
-      if (current.timer) {
-        clearTimeout(current.timer);
+      if (ref.current.timer) {
+        clearTimeout(ref.current.timer);
       }
-      current.timer = setTimeout(() => {
-        current.fn(...args);
+      ref.current.timer = setTimeout(() => {
+        ref.current.fn(...args);
       }, delay);
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    dep
+    [delay, ...dep]
   );
 };
